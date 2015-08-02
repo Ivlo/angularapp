@@ -3,11 +3,11 @@
  app.config(['$routeProvider',function($routeProvider){
     $routeProvider.when('/',{
       templateUrl: 'views/favorite.html',
-      controller: 'FavoriteGames'
+      controller: 'FavoriteGamesCtrl'
     })
     .when('/catalog',{
       templateUrl:'views/catalog.html',
-      controller:'Catalog'
+      controller:'CatalogCtrl'
     })
     .otherwise({redirectTo:'/'});
   }]);
