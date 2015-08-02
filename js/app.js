@@ -9,5 +9,9 @@
       templateUrl:'views/catalog.html',
       controller:'CatalogCtrl'
     })
+    .when('/catalog/:name',{
+      templateUrl:'views/game.html',
+      controller:'GameCtrl'
+    })
     .otherwise({redirectTo:'/'});
   }]);

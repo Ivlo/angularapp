@@ -5,5 +5,13 @@ app.controller('CatalogCtrl', ['$scope','CatalogFactory',function($scope,Catalog
   .then(function(elements) {
     $scope.games = elements.data.games
   })
+
+  $scope.goToGame = function ($event,name) {
+    
+    $event.preventDefault();
+
+    CatalogFactory.goToGame(name);
+  };
+
   
 }]);

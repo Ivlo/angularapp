@@ -1,4 +1,4 @@
-app.factory('CatalogFactory', ['$q','$http',function InboxFactory ($q,$http) {
+app.factory('CatalogFactory', ['$q','$http','$location',function InboxFactory ($q, $http, $location) {
   return {
     getGames: function() {
       var deferred = $q.defer();
@@ -10,6 +10,10 @@ app.factory('CatalogFactory', ['$q','$http',function InboxFactory ($q,$http) {
           deferred.reject(data);
         });
       return deferred.promise;
+    },
+    goToGame: function(name) {
+      $location.path('catalog/' + name)
+      
     }
   }
 }]);
