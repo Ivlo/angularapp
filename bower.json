@@ -1,0 +1,17 @@
+{
+  "name": "angularapp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Ivlo/angularapp",
+  "authors": [
+    "ivlo"
+  ],
+  "description": "angular app",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.3",
+    "angular-resource": "~1.4.3",
+    "angular-route": "~1.4.3"
+  }
+}
