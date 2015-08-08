@@ -2,6 +2,6 @@ app.controller('FavoriteGamesCtrl', ['$scope','$rootScope',function($scope,$root
   $scope.favorite = "Controlador de mis favoritos";
 
   if ($rootScope.data) {
-    var data= $scope.data.data.games;
+    $scope.favorites= $scope.data.data.games;
   }
 }]);

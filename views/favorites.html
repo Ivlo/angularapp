@@ -1,1 +1,5 @@
-<p>{{favorite}}</p>
+<ul class="catalog_list">
+  <li ng-repeat="game in favorites | filter: {hasBoosters:'true'}">
+    <p>{{ game.name }}</a></p>
+  </li>
+</ul>
