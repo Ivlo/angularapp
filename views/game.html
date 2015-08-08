@@ -1,1 +1,8 @@
-<p>{{ game }}</p>
+<p>
+  <a href="http://www.king.com{{game.url}}">{{game.name}}</a>
+  
+</p>
+<p>{{game.hasBoosters}}</p>
+<p>
+  <a href="#" ng-click="addTofavorite($event);">Añadir a favoritos</a>
+</p>

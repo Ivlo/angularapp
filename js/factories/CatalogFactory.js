@@ -1,19 +1,19 @@
-app.factory('CatalogFactory', ['$q','$http','$location',function InboxFactory ($q, $http, $location) {
-  return {
-    getGames: function() {
-      var deferred = $q.defer();
-      return $http.get('data/games.json')
-        .success(function (data) {
-          deferred.resolve(data);
-        })
-        .error(function (data) {
-          deferred.reject(data);
-        });
-      return deferred.promise;
-    },
-    goToGame: function(name) {
-      $location.path('catalog/' + name)
+app.factory('CatalogFactory', ['$http','$rootScope', '$location',function InboxFactory ($http, $rootScope,$location) {
+  
+    return $http.get('data/games.json')
+      .then(function (data) {
+        $rootScope.data= data;
+      })
+
+ 
+  
+ 
+    
       
-    }
-  }
+      /*var deferred = $q.defer();*/
+      
+
+
+    
+ 
 }]);

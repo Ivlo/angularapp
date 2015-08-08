@@ -1,17 +1,16 @@
-app.controller('CatalogCtrl', ['$scope','CatalogFactory',function($scope,CatalogFactory){
+app.controller('CatalogCtrl', ['$scope','$rootScope','$location','MyDataFactory',function($scope,$rootScope,$location,MyDataFactory){
   $scope.catalog = "Controlador del catalogo";
-
-  CatalogFactory.getGames()
-  .then(function(elements) {
-    $scope.games = elements.data.games
+  
+  $rootScope.$watch('data',function(){
+    if ($rootScope.data) {
+      $scope.games = $rootScope.data.data.games
+    }
   })
 
   $scope.goToGame = function ($event,name) {
-    
     $event.preventDefault();
-
-    CatalogFactory.goToGame(name);
+    $location.path('catalog/' + name)
   };
 
-  
+
 }]);

@@ -2,7 +2,7 @@
 
  app.config(['$routeProvider',function($routeProvider){
     $routeProvider.when('/',{
-      templateUrl: 'views/favorite.html',
+      templateUrl: 'views/favorites.html',
       controller: 'FavoriteGamesCtrl'
     })
     .when('/catalog',{
