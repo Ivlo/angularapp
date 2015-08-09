@@ -7,7 +7,7 @@
 </form>
 
 <ul class="catalog_list">
-  <li dir-paginate="game in games | filter:search| itemsPerPage: 2">
+  <li dir-paginate="game in games | filter:search| itemsPerPage: 10">
   <!-- <li ng-repeat="game in games"> -->
     <p><a href="#" ng-click="goToGame($event,game.short);"><img src="http://i1.midasplayer.com/images/games/{{game.short}}/{{game.short}}_170x80.gif"></a></p>
     <p>{{ game.name }}</p>
@@ -15,5 +15,5 @@
 </ul>
 
 <dir-pagination-controls 
-  max-size="2" direction-links="true" boundary-links="true" >
+  max-size="10" direction-links="true" boundary-links="true" >
 </dir-pagination-controls>
