@@ -1,7 +1,12 @@
 <p>{{catalog}}</p>
 <ul class="catalog_list">
-  <li ng-repeat="game in games">
+  <li dir-paginate="game in games | itemsPerPage: 2">
+  <!-- <li ng-repeat="game in games"> -->
     <p><a href="#" ng-click="goToGame($event,game.short);"><img src="http://i1.midasplayer.com/images/games/{{game.short}}/{{game.short}}_170x80.gif"></a></p>
     <p>{{ game.name }}</p>
   </li>
 </ul>
+
+<dir-pagination-controls 
+  max-size="2" direction-links="true" boundary-links="true" >
+</dir-pagination-controls>
