@@ -4,5 +4,9 @@
 </p>
 <p>{{game.hasBoosters}}</p>
 <p>
-  <a href="#" ng-click="addTofavorite($event);">Añadir a favoritos</a>
+  <a href="#" ng-hide="game.hasBoosters" ng-click="addTofavorite($event);">Añadir a favoritos</a>
+</p>
+
+<p>
+  <a href="#" ng-show="game.hasBoosters" ng-click="removeTofavorite($event);">Borrar de favoritos</a>
 </p>

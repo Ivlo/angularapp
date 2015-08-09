@@ -20,4 +20,9 @@ app.controller('GameCtrl', ['$scope','$rootScope','$routeParams',function($scope
     $scope.game.hasBoosters= true;
   }
 
+  $scope.removeTofavorite = function($event) {
+    $event.preventDefault();
+    $scope.game.hasBoosters= false;
+  }
+
 }]);
