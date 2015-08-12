@@ -1,7 +1,9 @@
-app.controller('GameCtrl', ['$scope','$rootScope','$routeParams',function($scope,$rootScope,$routeParams){
-  if ($rootScope.data) {
-    var dataGames= $scope.data.data.games;
-  }
+app.controller('GameCtrl', ['$scope','$rootScope','$routeParams','MyDataFactory',function($scope,$rootScope,$routeParams,MyDataFactory){
+  // if ($rootScope.data) {
+  //   var dataGames= $scope.data.data.games;
+  // }
+
+  var dataGames=  MyDataFactory.getDataFromLocalStorage('games')
 
   var routeGame= $routeParams.name;
      
@@ -18,11 +20,13 @@ app.controller('GameCtrl', ['$scope','$rootScope','$routeParams',function($scope
   $scope.addTofavorite = function($event) {
     $event.preventDefault();
     $scope.game.hasBoosters= true;
+    MyDataFactory.setDataToLocalStorage('games',dataGames);
   }
 
   $scope.removeTofavorite = function($event) {
     $event.preventDefault();
     $scope.game.hasBoosters= false;
+    MyDataFactory.setDataToLocalStorage('games',dataGames);
   }
 
 }]);

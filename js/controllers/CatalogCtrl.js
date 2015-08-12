@@ -1,11 +1,13 @@
 app.controller('CatalogCtrl', ['$scope','$rootScope','$location','MyDataFactory',function($scope,$rootScope,$location,MyDataFactory){
   $scope.catalog = "Controlador del catalogo";
-  
-  $rootScope.$watch('data',function(){
-    if ($rootScope.data) {
-      $scope.games = $rootScope.data.data.games
-    }
+ 
+  MyDataFactory.getDataFromServer().then(function(data){
+    var allData= data.data.games;
+    $scope.games= allData;
+
+    MyDataFactory.setDataToLocalStorage('games',allData);
   })
+  
 
   $scope.goToGame = function ($event,name) {
     $event.preventDefault();

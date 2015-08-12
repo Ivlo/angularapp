@@ -1,7 +1,15 @@
-app.factory('MyDataFactory', ['$http','$rootScope',function MyDataFactory ($http, $rootScope) {
+app.factory('MyDataFactory', ['$http','$rootScope','$window',function MyDataFactory ($http, $rootScope, $window) {
+
+  return {
+    getDataFromServer: function() {
+      return $http.get('data/games.json')
+    },
+    getDataFromLocalStorage: function(key) {
+      return JSON.parse($window.localStorage[key] || '{}');
+    },
+    setDataToLocalStorage: function(key,value) {
+      $window.localStorage[key] = JSON.stringify(value);
+    }
+  }
   
-  return $http.get('data/games.json')
-    .then(function (data) {
-      $rootScope.data= data;
-    })
 }]);
