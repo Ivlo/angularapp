@@ -1,4 +1,4 @@
-app.factory('MyDataFactory', ['$http','$rootScope','$window',function MyDataFactory ($http, $rootScope, $window) {
+app.factory('MyDataFactory', ['$http','$window',function MyDataFactory ($http, $window) {
 
   return {
     getDataFromServer: function() {
