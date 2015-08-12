@@ -1,11 +1,21 @@
 app.controller('GameCtrl', ['$scope','$rootScope','$routeParams','MyDataFactory',function($scope,$rootScope,$routeParams,MyDataFactory){
-  // if ($rootScope.data) {
-  //   var dataGames= $scope.data.data.games;
-  // }
+  
+  if (localStorage.getItem("games") === null) {
+    console.log('no hay local storage');
+    MyDataFactory.getDataFromServer().then(function(data){
+      var allData= data.data.games;
 
-  var dataGames=  MyDataFactory.getDataFromLocalStorage('games')
+      $scope.games= allData;
 
-  var routeGame= $routeParams.name;
+      MyDataFactory.setDataToLocalStorage('games',allData);
+    })
+  }else {
+    $scope.games= MyDataFactory.getDataFromLocalStorage('games')
+    console.log('hay local storage');
+  }
+
+  var dataGames=  $scope.games,
+      routeGame= $routeParams.name;
      
   $scope.getGame = function() {
     for (var i in dataGames) {

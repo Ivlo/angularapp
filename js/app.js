@@ -1,7 +1,7 @@
  var app = angular.module("myApp",['ngRoute','angularUtils.directives.dirPagination']);
 
  app.config(['$routeProvider',function($routeProvider){
-    $routeProvider.when('/',{
+    $routeProvider.when('/favorites',{
       templateUrl: 'views/favorites.html',
       controller: 'FavoriteGamesCtrl'
     })
@@ -13,5 +13,5 @@
       templateUrl:'views/game.html',
       controller:'GameCtrl'
     })
-    .otherwise({redirectTo:'/'});
+    .otherwise({redirectTo:'/favorites'});
   }]);

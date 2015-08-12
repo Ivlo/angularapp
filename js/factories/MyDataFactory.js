@@ -8,7 +8,7 @@ app.factory('MyDataFactory', ['$http','$rootScope','$window',function MyDataFact
       return JSON.parse($window.localStorage[key] || '{}');
     },
     setDataToLocalStorage: function(key,value) {
-      $window.localStorage[key] = JSON.stringify(value);
+      $window.localStorage.setItem(key, JSON.stringify(value));
     }
   }
   
