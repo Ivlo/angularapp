@@ -1,9 +1,37 @@
 .m_search {
-  margin:10px 0;
-  text-align:right;
+  position:relative;
+  float:right;
+  width: 25%;
+  margin-right: 14px;
+  border-radius:3px;
+  border:1px solid #ff6a00;
 
-  > * {
+  &:before {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    display: block;
+    width:20px;
+    height: 20px;
+    margin-top: -10px;
+    background: url("../images/search.svg") no-repeat left top;
+    background-size: 16px 20px;
+  }
+
+  label {
+    display: none;
+  }
+
+  input {
     display: inline-block;
+    box-sizing:border-box;
+    padding: 8px 8px 8px 36px;
+    width: 100%;
+    border:none;
+    font-size: 14px;
+    border-radius:3px;
+    color:#3d3d3d;
   }
 
 }
@@ -39,8 +67,7 @@
 }
 
 .m_heading {
-  margin-left: 10px;
-  margin-bottom:20px;
+  margin:70px 0 40px 10px;
   font-family: 'Roboto', sans-serif;
   font-size:40px;
   font-weight:400;
