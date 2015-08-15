@@ -46,3 +46,19 @@ footer {
     text-align:center;
   }
 }
+
+.row {
+  overflow: hidden;
+}
+
+.col {
+  float:left;
+}
+
+.col_3 {
+  width: 75%;
+}
+
+.col_1 {
+  width: 25%;
+}

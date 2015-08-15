@@ -31,12 +31,16 @@ app.controller('GameCtrl', ['$scope','$rootScope','$routeParams','MyDataFactory'
     $event.preventDefault();
     $scope.game.hasBoosters= true;
     MyDataFactory.setDataToLocalStorage('games',dataGames);
+
+    $scope.message= "Game added :). You can go to favorites to view the game."
   }
 
   $scope.removeTofavorite = function($event) {
     $event.preventDefault();
     $scope.game.hasBoosters= false;
     MyDataFactory.setDataToLocalStorage('games',dataGames);
+
+    $scope.message= "Game removed :("
   }
 
 }]);

@@ -1,3 +1,8 @@
 @import "normalization.scss";
-@import "modules.scss";
 @import "layout.scss";
+@import "modules.scss";
+
+.fluid_image {
+  max-width: 100%;
+  height: auto;
+}
