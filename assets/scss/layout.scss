@@ -1,0 +1,47 @@
+/* =========== */
+/* = HEADER = */
+/* ========== */
+
+header {
+  padding-bottom:20px;
+  background-color:#fe7c02;
+  overflow:hidden;
+}
+
+.wrapper {
+  width:1020px;
+  margin:0 auto;
+}
+
+.logo {
+  position:absolute;
+  top: 0;
+}
+
+.main_nav {
+  float:right;
+  li {
+    padding-top:20px;
+    margin-right:10px;
+    display:inline-block;
+  }
+
+  a {
+    color:#fff;
+    font-size:16px;
+  }
+}
+
+.main_content {
+  margin-top:50px;
+}
+
+footer {
+  padding:20px 0;
+  background-color:#3d3d3d;
+  font-size:10px;
+  p {
+    color:#fff;
+    text-align:center;
+  }
+}

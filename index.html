@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Angular App</title>
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <header>
   <div class="wrapper">
-    <a href="">logo</a>
+    <a href="#" class="logo"><img src="assets/images/logo.png"></a>
     <nav class="main_nav">
       <ul>
         <li><a href="#/">Favoritos</a></li>
@@ -17,16 +18,16 @@
     </nav>
   </div>
 </header>
+
 <div class="main_content">
   <div class="wrapper" ng-view></div>
 </div>
 
 <footer>
   <div class="wrapper">
-    Aquí va el footer
+    <p>© Test Iván López Marsella. King</p>
   </div>
 </footer>
-
 
 <!-- Vendor libraries -->
 <script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>

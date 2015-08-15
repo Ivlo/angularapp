@@ -1,19 +1,20 @@
-<p>{{catalog}}</p>
-<form class="form-inline">
-  <div class="form-group">
-    <label >Search</label>
-    <input type="text" ng-model="search" class="form-control" placeholder="Search">
-  </div>
+
+<form class="m_search">
+  <label >Search</label>
+  <input type="text" ng-model="search" placeholder="Search">
 </form>
 
-<ul class="catalog_list">
-  <li dir-paginate="game in games | filter:search| itemsPerPage: 10">
-  <!-- <li ng-repeat="game in games"> -->
-    <p><a href="#" ng-click="goToGame($event,game.short);"><img src="http://i1.midasplayer.com/images/games/{{game.short}}/{{game.short}}_170x80.gif"></a></p>
-    <p>{{ game.name }}</p>
+<h1 class="m_heading">Catalog</h1>
+
+<ul class="m_games">
+  <li dir-paginate="game in games | filter:search| itemsPerPage: 20">
+    <a href="#" ng-click="goToGame($event,game.short);">
+      <img src="http://i1.midasplayer.com/images/games/{{game.short}}/{{game.short}}_170x80.gif">
+      <strong class="m_games_title">{{ game.name }}</strong>
+    </a>
   </li>
 </ul>
 
 <dir-pagination-controls 
-  max-size="10" direction-links="true" boundary-links="true" >
+  max-size="20" direction-links="true" boundary-links="false" class="m_pagination" >
 </dir-pagination-controls>

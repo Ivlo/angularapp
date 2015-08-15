@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+  display: block; }
+
+a img, fieldset {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-size: x-small;
+  font-family: Arial, Helvetica, sans-serif; }
+
+body, html {
+  height: 100%;
+  width: 100%; }
+
+img {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+.accessible {
+  display: none; }
+
+button,
+label {
+  cursor: pointer; }
+
+textarea,
+input,
+button,
+legend {
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif; }
+
+input,
+textarea {
+  -webkit-appearance: none; }
+
+legend {
+  display: block; }
+
+a:active {
+  background-color: transparent; }
+
+input[type=checkbox],
+input[type=radio],
+input[type=checkbox][checked],
+input[type=radio][checked] {
+  border: 0;
+  background-color: transparent; }
+
+.m_search {
+  margin: 10px 0;
+  text-align: right; }
+  .m_search > * {
+    display: inline-block; }
+
+.m_games li {
+  width: 20%;
+  margin-bottom: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center; }
+.m_games a {
+  display: inline-block; }
+.m_games a:hover .m_games_title {
+  color: #ff6a00; }
+
+.m_games_title {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #3d3d3d; }
+
+.m_heading {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #ff6a00; }
+
+.m_pagination {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center; }
+
+.pagination {
+  display: inline-block;
+  margin: 20px 0;
+  text-align: center;
+  border: 1px solid #ff6a00;
+  border-radius: 3px; }
+  .pagination li {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    border-right: 1px solid #ff6a00; }
+    .pagination li:hover {
+      background-color: #ffcb93; }
+  .pagination li.active {
+    background-color: #ff6a00; }
+    .pagination li.active a {
+      color: #fff; }
+  .pagination li:last-child {
+    border-right: none; }
+  .pagination a {
+    display: block;
+    color: #ff6a00; }
+
+/* =========== */
+/* = HEADER = */
+/* ========== */
+header {
+  padding-bottom: 20px;
+  background-color: #fe7c02;
+  overflow: hidden; }
+
+.wrapper {
+  width: 1020px;
+  margin: 0 auto; }
+
+.logo {
+  position: absolute;
+  top: 0; }
+
+.main_nav {
+  float: right; }
+  .main_nav li {
+    padding-top: 20px;
+    margin-right: 10px;
+    display: inline-block; }
+  .main_nav a {
+    color: #fff;
+    font-size: 16px; }
+
+.main_content {
+  margin-top: 50px; }
+
+footer {
+  padding: 20px 0;
+  background-color: #3d3d3d;
+  font-size: 10px; }
+  footer p {
+    color: #fff;
+    text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
