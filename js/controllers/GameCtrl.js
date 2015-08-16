@@ -11,7 +11,6 @@ app.controller('GameCtrl', ['$scope','$rootScope','$routeParams','MyDataFactory'
     })
   }else {
     $scope.games= MyDataFactory.getDataFromLocalStorage('games')
-    console.log('hay local storage');
   }
 
   var dataGames=  $scope.games,
@@ -49,7 +48,7 @@ app.controller('GameCtrl', ['$scope','$rootScope','$routeParams','MyDataFactory'
     var elementMessage= document.querySelectorAll(".m_message");
     $scope.message= event.target.getAttribute('data-message');
 
-    elementMessage[0].classList.add("ivan");
+    
 
     elementMessage[0].classList.add("hide-add-start");
     setTimeout(function() {
