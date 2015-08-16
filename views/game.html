@@ -1,23 +1,21 @@
 <h1 class="m_heading">{{game.name}}</h1>
 
 <div class="row">
-  <div class="col col_3">
+  <div class="col col_3 m_info_game">
     <img src="http://i2.midasplayer.com/images/games/{{game.short}}/tournamentPage/{{game.short}}_764x260.jpg" class="fluid_image">
+
+    <div class="m_info_game_content">
+      <a href="http://www.king.com{{game.url}}" class="btn game">Play</a>
+    </div>
   </div>
 
   <div class="col col_1">
     <div class="m_actions">
-      <a href="#" class="btn add" ng-hide="game.hasBoosters" ng-click="addTofavorite($event);">Add to favorites</a>
+      <a href="#" class="btn add" ng-hide="game.hasBoosters" ng-click="addTofavorite($event);" data-message="Game added :). You can go to favorites to view the game.">Add to favorites</a>
 
-      <a href="#"  class="btn remove" ng-show="game.hasBoosters" ng-click="removeTofavorite($event);">Remove to favorites</a>
+      <a href="#"  class="btn remove" ng-show="game.hasBoosters" ng-click="removeTofavorite($event);" data-message="Game removed :(">Remove to favorites</a>
     </div>
 
-    <div class="message">{{message}}</div>
+    <div class="m_message hide">{{message}}</div>
   </div>
 </div>
-
-<p>
-  <a href="http://www.king.com{{game.url}}">{{game.name}}</a>
-  
-</p>
-

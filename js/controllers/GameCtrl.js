@@ -30,17 +30,40 @@ app.controller('GameCtrl', ['$scope','$rootScope','$routeParams','MyDataFactory'
   $scope.addTofavorite = function($event) {
     $event.preventDefault();
     $scope.game.hasBoosters= true;
+
     MyDataFactory.setDataToLocalStorage('games',dataGames);
 
-    $scope.message= "Game added :). You can go to favorites to view the game."
+    $scope.showMessage($event)
   }
 
   $scope.removeTofavorite = function($event) {
     $event.preventDefault();
     $scope.game.hasBoosters= false;
+
     MyDataFactory.setDataToLocalStorage('games',dataGames);
 
-    $scope.message= "Game removed :("
+    $scope.showMessage($event)
   }
 
+  $scope.showMessage= function(event) {
+    var elementMessage= document.querySelectorAll(".m_message");
+    $scope.message= event.target.getAttribute('data-message');
+
+    elementMessage[0].classList.add("ivan");
+
+    elementMessage[0].classList.add("hide-add-start");
+    setTimeout(function() {
+         elementMessage[0].classList.add("hide");
+         elementMessage[0].classList.remove("hide-add-start");
+    }, 3000);
+
+     elementMessage[0].classList.add("hide-remove");
+     elementMessage[0].classList.remove("hide");
+    elementMessage[0].offsetHeight;
+    elementMessage[0].classList.add("hide-remove-active");
+    setTimeout(function(){
+      elementMessage[0].classList.remove("hide-remove");
+      elementMessage[0].classList.remove("hide-remove-active");
+    }, 3000);  
+  }
 }]);

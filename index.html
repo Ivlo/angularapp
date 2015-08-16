@@ -9,13 +9,13 @@
 </head>
 <body>
 
-<header>
+<header ng-controller="HeaderController">
   <div class="wrapper">
     <a href="#" class="logo"><img src="assets/images/logo.png"></a>
     <nav class="main_nav">
       <ul>
-        <li><a href="#/">Favoritos</a></li>
-        <li><a href="#/catalog">Catálogo</a></li>
+        <li ng-class="{ active: isActive('/favorites')}"><a href="#/">Favorites</a></li>
+        <li ng-class="{ active: isActive('/catalog')}"><a href="#/catalog">Catalog</a></li>
       </ul>
     </nav>
   </div>
@@ -41,6 +41,7 @@
 <script src="js/controllers/CatalogCtrl.js"></script>
 <script src="js/controllers/FavoriteGamesCtrl.js"></script>
 <script src="js/controllers/GameCtrl.js"></script>
+<script src="js/controllers/HeaderCtrl.js"></script>
 <script src="js/factories/MyDataFactory.js"></script>
 </body>
 </html>

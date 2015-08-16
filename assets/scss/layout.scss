@@ -17,6 +17,13 @@ header {
 .logo {
   position:absolute;
   top: 0;
+  transition:rotate 0.3s ease;
+}
+
+.logo:hover {
+  -webkit-transform: rotateZ(30deg);
+  -ms-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
 }
 
 .main_nav {
@@ -30,6 +37,14 @@ header {
   a {
     color:#fff;
     font-size:18px;
+  }
+
+  .active a {
+    display: inline-block;
+    padding:4px 10px;
+    background-color:#fff;
+    color:#fe7c02;
+    border-radius:3px;
   }
 }
 
@@ -49,6 +64,7 @@ footer {
 
 .row {
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .col {
