@@ -127,13 +127,22 @@
   font-weight: 700;
   border-radius:4px;
   color:#fff;
+  transition:background-color 0.3s ease-in-out;
 
   &.add {
     background-color:#fe7c02;
+
+    &:hover {
+      background-color:#ed7504;
+    }
   }
 
   &.remove {
     background-color:#c9302c;
+
+    &:hover {
+      background-color:#b52a27;
+    }
   }
 
   &.game {
@@ -192,8 +201,8 @@
 
   .m_info_game_content {
     opacity:1;
-    background: rgba(254, 124, 2, .7);
-    border: 10px solid rgba(255,255,255,.7);
+    background: rgba(254, 124, 2, .5);
+    
   }
 
 }

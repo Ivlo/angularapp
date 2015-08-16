@@ -5,6 +5,8 @@
 
 <h1 class="m_heading">Favorites</h1>
 
+<div class="m_message" ng-hide="favorites.length">No Favorites! Try adding one from our catalogue.</div>
+
 <ul class="m_games">
   <li dir-paginate="favorite in favorites | filter: {hasBoosters:'true'} | filter:search | itemsPerPage: 25">
     <p><a href="http://www.king.com{{favorite.url}}" ng-click="goToGame($event,favorite.short);"><img src="http://i1.midasplayer.com/images/games/{{favorite.short}}/{{favorite.short}}_170x80.gif"></a></p>

@@ -10,7 +10,7 @@ header {
 }
 
 .wrapper {
-  width:1020px;
+  max-width:1020px;
   margin:0 auto;
 }
 
@@ -30,13 +30,13 @@ header {
   float:right;
   li {
     padding-top:20px;
-    margin-right:10px;
+    margin-right:16px;
     display:inline-block;
   }
 
   a {
     color:#fff;
-    font-size:18px;
+    font-size:16px;
   }
 
   .active a {
