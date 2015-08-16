@@ -288,19 +288,37 @@ footer {
 .hide-remove-active {
   opacity: 1; }
 
-@media (max-width: 1100px) {
+@media (max-width: 736px) {
   .m_heading {
     margin: 0px 0 26px 10px;
     font-size: 32px; }
 
   .m_games li {
     width: 50%; }
+    .m_games li > * {
+      padding: 10px; }
+    .m_games li img {
+      max-width: 100%;
+      height: auto; }
 
   .col {
     float: none;
     display: block;
     box-sizing: border-box;
     width: 100%;
-    padding: 0 10px; } }
+    padding: 0 10px; }
+
+  .m_info_game_content {
+    left: 10px;
+    right: 10px; }
+    .m_info_game_content a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 10px 20px;
+      margin-left: -33px;
+      margin-top: -20px;
+      min-width: 0;
+      font-size: 14px; } }
 
 /*# sourceMappingURL=style.css.map */
